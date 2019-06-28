@@ -21,7 +21,7 @@ target.port=[port]
 target.namespace=[namespace]  
 target.username=[IRIS Username]  
 target.password=[password]  
-target.table=SQLUser.green_tripdata
+target.table=green_tripdata
 
 edit runCSV.sh so that IRISJAR points to the right jar file  
 

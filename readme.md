@@ -32,4 +32,5 @@ edit runDrv.sh so that IRISJAR points to the right jar file
 $ ./runDrv.sh green.drv.properties
 
 # Info
-For more options, please see https://irisdocs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=BJAVA_bulkload
+For more options, please visit   
+https://irisdocs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=BJAVA_bulkload

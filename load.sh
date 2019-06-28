@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo apt-get install -y openjdk-8-jre-headless
-curl -o green_tripdata_2016-01.csv https://s3.amazonaws.com/nyc-tlc/trip+data/green_tripdata_2016-01.csv
-export IRISJAR=/usr/local/iris/dev/java/lib/JDK18
+curl https://jaist.dl.sourceforge.net/project/csvjdbc/CsvJdbc/1.0-35/csvjdbc-1.0-35.jar -o csvjdbc-1.0-35.jar
+curl https://s3.amazonaws.com/nyc-tlc/trip+data/green_tripdata_2016-01.csv | sed  '/^.$/d' > green_tripdata_2016-01.csv
 

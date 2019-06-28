@@ -1,8 +1,10 @@
-# create tables by using table.sql
-# ./load.sh
-# sudo apt-get install -y openjdk-8-jre-headless
+# create a table by using table.sql
+# download a csv jdbc driver and CSV file
+./download.sh
+# install JVM (if it's not already)
+sudo apt-get install -y openjdk-8-jre-headless
 
-Native CSV driver
-# ./runCSV.sh green.csv.properties
-CsvJdbc Driver
-# ./runDrv.sh green.drv.properties
+# Run Native CSV driver
+./runCSV.sh green.csv.properties
+# Run CsvJdbc Driver
+./runDrv.sh green.drv.properties

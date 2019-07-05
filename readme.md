@@ -14,6 +14,7 @@ $ sudo yum install -y java-1.8.0-openjdk-headless
 
 # Create log directory
 $ mkdir log  
+
 # Run Native CSV driver
 edit green.csv.properties to meet the enviroment
 >target.host=[host]  
@@ -26,6 +27,8 @@ target.table=green_tripdata
 edit runCSV.sh so that IRISJAR points to the right jar file  
 
 $ ./runCSV.sh green.csv.properties
+(Windows) runCSV.bat green.csv.properties
+
 # Run CsvJdbc Driver
 edit green.drv.properties to meet the enviroment  
 edit runDrv.sh so that IRISJAR points to the right jar file  

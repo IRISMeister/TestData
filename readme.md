@@ -4,7 +4,7 @@ If non-shard environment, remove last 'shard' keyword from Create Table command.
 
 ```
 $ iris session iris1 "##class(%SYSTEM.SQL).Shell()"  
-[SQL]USER>>  [paste Create Table command here]
+[SQL]USER>>  [copy and paste Create Table command here]
 ```
 
 # Download a csv jdbc driver and CSV file

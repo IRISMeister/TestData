@@ -17,8 +17,8 @@ or
 $ sudo yum install -y java-1.8.0-openjdk-headless
 ```
 # To run Native CSV driver
+Edit green.csv.properties to meet the enviroment.
 ```
-edit green.csv.properties to meet the enviroment
 target.host=[host]  
 target.port=[port]  
 target.namespace=[namespace]  
@@ -27,16 +27,18 @@ target.password=[password]
 target.table=green_tripdata
 ```
 
-edit runCSV.sh so that IRISJAR points to the right jar file  
+Edit runCSV.sh so that IRISJAR points to the right jar file.  
+Run it
 ```
 (Linux) $ ./runCSV.sh green.csv.properties
 (Windows) > runCSV.bat green.csv.properties
 ```
 # To run CsvJdbc Driver
-edit green.drv.properties to meet the enviroment  
-edit runDrv.sh so that IRISJAR points to the right jar file  
+Edit green.drv.properties to meet the enviroment.  
+Edit runDrv.sh so that IRISJAR points to the right jar file.  
+Run it  
 ```
-$ ./runDrv.sh green.drv.properties
+(Linux) $ ./runDrv.sh green.drv.properties
 ```
 # Info
 For more options, please visit   

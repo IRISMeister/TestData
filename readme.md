@@ -1,13 +1,9 @@
 # (optional) Create a new namespace
-# Create a table by using table.sql
-If non-shard environment, remove last 'shard' keyword from Create Table command.
-
+# Create a target table
+If non-shard environment, edit createtable.txt and remove last 'shard' keyword from Create Table command.
 SimpleMover requires a table definition prior to running.  Assuming you are using namespace 'bigdata',
 ```
-$ iris session iris -U bigdata "##class(%SYSTEM.SQL).Shell()"  
-[SQL]BIGDATA>>  [copy and paste Create Table command here]
-[SQL]BIGDATA>>  q
-$
+$ iris session iris -U bigdata "##class(%SYSTEM.SQL).Shell()" < createtable.txt
 ```
 
 # Download a csv jdbc driver and CSV file

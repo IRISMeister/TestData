@@ -2,9 +2,12 @@
 # Create a table by using table.sql
 If non-shard environment, remove last 'shard' keyword from Create Table command.
 
+SimpleMover requires a table definition prior to running.  Assuming you are using namespace 'bigdata',
 ```
-$ iris session iris1 "##class(%SYSTEM.SQL).Shell()"  
-[SQL]USER>>  [copy and paste Create Table command here]
+$ iris session iris -U bigdata "##class(%SYSTEM.SQL).Shell()"  
+[SQL]BIGDATA>>  [copy and paste Create Table command here]
+[SQL]BIGDATA>>  q
+$
 ```
 
 # Download a csv jdbc driver and CSV file
@@ -17,11 +20,7 @@ $ sudo apt-get install -y openjdk-8-jre-headless
 or  
 $ sudo yum install -y java-1.8.0-openjdk-headless
 ```
-# Create log directory
-```
-$ mkdir logs  
-```
-# Run Native CSV driver
+# To run Native CSV driver
 ```
 edit green.csv.properties to meet the enviroment
 target.host=[host]  
@@ -37,7 +36,7 @@ edit runCSV.sh so that IRISJAR points to the right jar file
 (Linux) $ ./runCSV.sh green.csv.properties
 (Windows) > runCSV.bat green.csv.properties
 ```
-# Run CsvJdbc Driver
+# To run CsvJdbc Driver
 edit green.drv.properties to meet the enviroment  
 edit runDrv.sh so that IRISJAR points to the right jar file  
 ```

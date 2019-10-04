@@ -1,3 +1,5 @@
 *.csv
 *.jar
 logs/*.log
+convrt.sh
+order.csv.properties

@@ -1,6 +1,10 @@
 # (optional) Create a new namespace
 # Create a target table
-SimpleMover requires a table definition prior to running.  Assuming you are using namespace 'bigdata',
+Edit first two lines of createtable.txt and/or createtable_no_shard.txt to refelect your environment.  
+```
+$ vi createtable.txt
+```
+SimpleMover requires a table definition prior to running.  Assuming you are using namespace 'bigdata'
 ```
 $ iris session iris -U bigdata "##class(%SYSTEM.SQL).Shell()" < createtable.txt
 ```
@@ -30,7 +34,7 @@ target.password=[password]
 target.table=green_tripdata
 ```
 
-Edit runCSV.sh so that IRISJAR points to the right jar file.  
+Edit runCSV.sh so that IRISJAR points to the right jar files.  
 Run it
 ```
 (Linux) $ ./runCSV.sh green.csv.properties
@@ -38,7 +42,7 @@ Run it
 ```
 # To run CsvJdbc Driver
 Edit green.drv.properties to meet the enviroment.  
-Edit runDrv.sh so that IRISJAR points to the right jar file.  
+Edit runDrv.sh so that IRISJAR points to the right jar files.  
 Run it  
 ```
 (Linux) $ ./runDrv.sh green.drv.properties

@@ -41,20 +41,18 @@ target.password=[password]
 target.table=green_tripdata
 ```
 
-Edit runCSV.sh so that IRISJAR points to the right jar file path.  
-Run it
+Run it.  
 ```
-$ vi runCSV.sh
 $ ./runCSV.sh green.csv.properties
 (Windows) > runCSV.bat green.csv.properties
 ```
 # To run CsvJdbc Driver
 Edit green.drv.properties to meet the enviroment.  
-Edit runDrv.sh so that IRISJAR points to the right jar files.  
-Run it  
+Run it.  
 ```
 $ ./runDrv.sh green.drv.properties
 ```
+# Tune tables
 Don't forget to run TuneTable!
 ```
 $ ./tunetable.sh

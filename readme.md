@@ -1,16 +1,19 @@
 # (optional) Create a new namespace
 # Create a target table
-Edit first two lines of createtable.txt and/or createtable_no_shard.txt to refelect your environment.  
+Assuming 
+- IRIS user/pass are SuperUser/sys
+- instace name is iris
+- namespace is bigdata
+If they are not, edit first four lines of createtable.sh to refelect your environment.  
 ```
-$ vi createtable.txt
+(optional) $ vi createtable.sh
 ```
-SimpleMover requires a table definition prior to running.  Assuming you are using namespace 'bigdata'
+SimpleMover requires a table definition prior to running.  Just run createtable.sh.  
+If non-shard environment, please edit createtable.txt and remove ",shard" from the first CREATE TABLE command.
+
 ```
-$ iris session iris -U bigdata "##class(%SYSTEM.SQL).Shell()" < createtable.txt
-```
-If non-shard environment, please use createtable_no_shard.txt instead.
-```
-$ iris session iris -U bigdata "##class(%SYSTEM.SQL).Shell()" < createtable_no_shard.txt
+(optional) $ vi createtable.txt
+$ ./createtable.sh
 ```
 
 # Download a csv jdbc driver and CSV file

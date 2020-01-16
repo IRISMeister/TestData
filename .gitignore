@@ -1,3 +1,4 @@
 *.csv
 *.jar
+*.scr
 logs/*.log

@@ -1,11 +1,5 @@
 #!/bin/bash
-
-# ++ Edit here ++
-instanceName=iris
-namespace=bigdata
-user=_SYSTEM
-pass=sys
-# -- Edit here --
+source envs.sh
 
 workdir=$(pwd)
 userpass=$user'\n'$pass'\n'

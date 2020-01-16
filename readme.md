@@ -5,9 +5,9 @@ Assuming
 - instace name is iris
 - namespace is bigdata
 
-If they are not, edit first four lines of createtable.sh to refelect your environment.  
+If they are not, edit first four lines of envs.sh to refelect your environment.  
 ```
-(optional) $ vi createtable.sh
+(optional) $ vi envs.sh
 ```
 SimpleMover requires a table definition prior to running.  Just run createtable.sh.  
 If non-shard environment, please edit createtable.txt and remove ",shard" from the first CREATE TABLE command.
@@ -43,7 +43,7 @@ Edit runCSV.sh so that IRISJAR points to the right jar file path.
 Run it
 ```
 $ vi runCSV.sh
-(Linux) $ ./runCSV.sh green.csv.properties
+$ ./runCSV.sh green.csv.properties
 (Windows) > runCSV.bat green.csv.properties
 ```
 # To run CsvJdbc Driver
@@ -51,8 +51,14 @@ Edit green.drv.properties to meet the enviroment.
 Edit runDrv.sh so that IRISJAR points to the right jar files.  
 Run it  
 ```
-(Linux) $ ./runDrv.sh green.drv.properties
+$ ./runDrv.sh green.drv.properties
 ```
+Don't forget to run TuneTable!
+```
+$ ./tunetable.sh
+```
+
+
 # Info
 For more options, please visit   
 https://irisdocs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=BJAVA_bulkload

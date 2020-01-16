@@ -1,9 +1,10 @@
 # (optional) Create a new namespace
 # Create a target table
 Assuming 
-- IRIS user/pass are SuperUser/sys
+- IRIS user/pass are _SYSTEM/sys
 - instace name is iris
 - namespace is bigdata
+
 If they are not, edit first four lines of createtable.sh to refelect your environment.  
 ```
 (optional) $ vi createtable.sh
@@ -29,6 +30,7 @@ $ sudo yum install -y java-1.8.0-openjdk-headless
 # To run Native CSV driver
 Edit green.csv.properties to meet the enviroment.
 ```
+$ vi green.csv.properties
 target.host=[host]  
 target.port=[port]  
 target.namespace=[namespace]  
@@ -37,9 +39,10 @@ target.password=[password]
 target.table=green_tripdata
 ```
 
-Edit runCSV.sh so that IRISJAR points to the right jar files.  
+Edit runCSV.sh so that IRISJAR points to the right jar file path.  
 Run it
 ```
+$ vi runCSV.sh
 (Linux) $ ./runCSV.sh green.csv.properties
 (Windows) > runCSV.bat green.csv.properties
 ```

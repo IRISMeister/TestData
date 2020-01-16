@@ -1,14 +1,16 @@
 # (optional) Create a new namespace
-# Create a target table
+# Adjust to environment
 Assuming 
 - IRIS user/pass are _SYSTEM/sys
 - instace name is iris
 - namespace is bigdata
+- IRIS JAR files are located at /usr/irissys/dev/java/lib/JDK18
 
-If they are not, edit first four lines of envs.sh to refelect your environment.  
+If they are not, edit lines of envs.sh to refelect your environment.  
 ```
 (optional) $ vi envs.sh
 ```
+# Create a target table
 SimpleMover requires a table definition prior to running.  Just run createtable.sh.  
 If non-shard environment, please edit createtable.txt and remove ",shard" from the first CREATE TABLE command.
 

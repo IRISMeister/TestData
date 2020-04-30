@@ -1,5 +1,5 @@
 # (optional) Create a new namespace
-# Adjust to environment
+# Adjust to your environment
 Assuming 
 - IRIS user/pass are _SYSTEM/sys
 - instace name is iris
@@ -11,18 +11,27 @@ If they are not, edit lines of envs.sh to refelect your environment.
 (optional) $ vi envs.sh
 ```
 # Create a target table
-SimpleMover requires a table definition prior to running.  Just run createtable.sh.  
-If non-shard environment, please edit createtable.txt and remove ",shard" from the first CREATE TABLE command.
-
+SimpleMover requires a table definition prior to running.  
+If you want to create a shard table, please edit createtable.txt and add ",shard" at the end of the first CREATE TABLE command.
 ```
 (optional) $ vi createtable.txt
+    Trip_type varchar(10)
+    , shard
+);
+```
+
+And then, execute createtable.sh.  
+```
 $ ./createtable.sh
 ```
 
-# Download a csv jdbc driver and CSV file
+# Download a CSV file
+
 ```
 $ ./download.sh
 ```
+This will download open data published [here](https://www1.nyc.gov/site/tlc/about/data.page).
+
 # Install JVM (if it's not already)
 ```
 $ sudo apt-get install -y openjdk-8-jre-headless  
@@ -46,19 +55,12 @@ Run it.
 $ ./runCSV.sh green.csv.properties
 (Windows) > runCSV.bat green.csv.properties
 ```
-# To run CsvJdbc Driver
-Edit green.drv.properties to meet the enviroment.  
-Run it.  
-```
-$ ./runDrv.sh green.drv.properties
-```
 # Tune tables
 Don't forget to run TuneTable!
 ```
 $ ./tunetable.sh
 ```
 
-
 # Info
 For more options, please visit   
-https://irisdocs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=BJAVA_bulkload
+https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=ABULKLOAD

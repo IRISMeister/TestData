@@ -19,8 +19,8 @@ CREATE TABLE green_tripdata (
     improvement_surcharge numeric(18,2), 
     Total_amount numeric(18,2), 
     Payment_type Integer, 
-    Trip_type varchar(10),
-    shard);
+    Trip_type varchar(10)
+);
 CREATE INDEX idx_VendorID ON green_tripdata(VendorID);
 CREATE INDEX idx_lpep_pickup_datetime ON green_tripdata(lpep_pickup_datetime);
 CREATE INDEX idx_Lpep_dropoff_datetime ON green_tripdata(Lpep_dropoff_datetime);
